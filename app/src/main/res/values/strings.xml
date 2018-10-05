@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Cafe Cultura</string>
+    <string name="photo_description">Foto da Cafeteria</string>
+    <string name="local_description">Lorem Ipsolun</string>
+    <string name="local_address">Avenida Lorem Ipsolum</string>
+    <string name="local_contact_info">Tel: Lorem Ipsloum</string>
+</resources>
