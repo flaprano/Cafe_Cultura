@@ -4,38 +4,120 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/photo"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:contentDescription="@string/photo_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/description_photo"
         android:src="@drawable/photo"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:adjustViewBounds="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/localDescription"
-        android:layout_width="wrap_content"
+        android:id="@+id/infoTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/local_description"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/info_title"
         android:textColor="#000000"
+        android:textSize="34sp"
+        android:fontFamily="cursive"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/photo" />
 
     <TextView
-        android:id="@+id/localAddress"
+        android:id="@+id/infoDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/info_description"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:fontFamily="casual"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/infoTitle" />
+
+    <ImageView
+        android:id="@+id/iconLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/local_address"
-        app:layout_constraintTop_toBottomOf="@id/localDescription"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="@string/description_icon_location"
+        android:src="@drawable/icon_location"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/infoLocation" />
 
     <TextView
-        android:id="@+id/locaContactInfo"
+        android:id="@+id/infoLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/local_contact_info"
-        app:layout_constraintTop_toBottomOf="@id/localAddress"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/info_location"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/iconLocation"
+        app:layout_constraintTop_toBottomOf="@id/infoDescription" />
 
+    <ImageView
+        android:id="@+id/iconClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="@string/description_icon_clock"
+        android:src="@drawable/icon_clock"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/infoWorkTime" />
+
+    <TextView
+        android:id="@+id/infoWorkTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/info_work_time"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/iconClock"
+        app:layout_constraintTop_toBottomOf="@id/infoLocation" />
+
+    <ImageView
+        android:id="@+id/iconContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="@string/description_icon_contact"
+        android:src="@drawable/icon_contact"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/infoContact" />
+
+    <TextView
+        android:id="@+id/infoContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/info_contact"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/iconContact"
+        app:layout_constraintTop_toBottomOf="@id/infoWorkTime" />
 
 </android.support.constraint.ConstraintLayout>
